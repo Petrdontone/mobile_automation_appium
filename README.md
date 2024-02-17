@@ -3,4 +3,4 @@
 Mobile Framework
 
 ![Android arch](./appium_android.drawio.png)
-![iOS arch](./appium_ios.drawio.png)
+![iOS arch](./appium_IOS.drawio.png)
