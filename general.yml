@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  pull_requests:
+    branches: [ "main" ]
+
+
+jobs:
+  health_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: check-folder-arch
+        run: ./check_files.sh
+      - name: finaly
+        run: echo "Job has been done"
+
