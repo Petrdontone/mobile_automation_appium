@@ -1,4 +1,3 @@
-
 capabilities = dict(
     platformName='Android',
     automationName='uiautomator2',
