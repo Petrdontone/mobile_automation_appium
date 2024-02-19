@@ -6,5 +6,3 @@ capabilities = dict(
     appPackage='org.wikipedia',
     platformVersion='12.0'
 )
-
-
