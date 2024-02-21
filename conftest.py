@@ -1,0 +1,20 @@
+from appium.options.android import UiAutomator2Options
+from helper.get_device_android import get_connected_device_capabilities
+from helper.init_appium_session import AppiumDriver
+
+capabilities = dict(
+    platformName='Android',
+    automationName='UiAutomator2',
+    deviceName='emulator-5554',
+    appPackage='org.wikipedia',
+    platformVersion='13.0',
+    appActivity='.main.MainActivity'
+)
+
+connected_device_capabilities = get_connected_device_capabilities()
+
+if connected_device_capabilities:
+    capabilities.update(connected_device_capabilities)
+
+appium_driver = AppiumDriver()
+appium_driver.create_driver(url='http://127.0.0.1:4723/wd/hub',capabilities=UiAutomator2Options().load_capabilities(caps=capabilities))
