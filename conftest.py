@@ -5,9 +5,9 @@ from helper.init_appium_session import AppiumDriver
 capabilities = dict(
     platformName='Android',
     automationName='UiAutomator2',
-    deviceName='emulator-5554',
+    deviceName='Pixel 3a API 31',
     appPackage='org.wikipedia',
-    platformVersion='13.0',
+    platformVersion='12.0',
     appActivity='.main.MainActivity'
 )
 
