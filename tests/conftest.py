@@ -27,4 +27,6 @@ def start_session():
     appium_driver = AppiumDriver()
     appium_driver.create_driver(url='http://127.0.0.1:4723/wd/hub',
                                 capabilities=UiAutomator2Options().load_capabilities(caps=capabilities))
+    yield appium_driver
+    appium_driver.quit_driver()
 
